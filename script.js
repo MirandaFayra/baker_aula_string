@@ -126,5 +126,26 @@ const imprimirPessoa = (nome, corFavorita, citacao)=>{
 
 imprimirPessoa()*/ 
 
+//---------------- PRATICA EXTRA -------------
 
+/*Crie uma função  que pergunte ao usuário seu nome e seu e-mail. Em seguida, imprima no console a mensagem no formato abaixo:
+"O e-mail emailDoUsuario foi cadastrado com sucesso. 
+Boas vindas, nomeDoUsuario!"
+Adicione à mensagem anterior a quantidade de caracteres presente no nome da pessoa.
+A seguir, faça o que se pede:
+Substitua todas as letras R na frase criada, por letras X
+Verifique se o e-mail da pessoa possui @, e imprima a resposta da verificação no console.*/ 
 
+function perguntarNomeEEmail (nome,email){
+    nome = prompt('Digite seu nome, pessoa usuária')
+    email = prompt('Digite seu email, pessoa usuária')
+    let quantidadeCaracteresDoNome = nome.length
+    let subistituirLetraR = nome.replace("r", "x")
+    let verificarSeTemArroba = email.includes('@')
+
+    console.log(`O e-mail ${email} foi cadastrado com sucesso. Seu email possui o @ :  ${verificarSeTemArroba}
+    Boas vindas, ${subistituirLetraR}! Seu nome possui ${quantidadeCaracteresDoNome} caracteres`)
+
+}
+
+perguntarNomeEEmail ()
